@@ -1,0 +1,27 @@
+body {
+    box-sizing: border-box;
+}
+
+.box {
+    display: grid;
+    border: 1px solid black;
+    padding: 2vh;
+    grid-column-gap: 0vw;
+    grid-template-columns: repeat(4, 3fr);
+}
+
+input.checkbox {
+    height: 25px;
+    width: 25px;
+    border: 2px solid black;
+    position: relative;
+    bottom: 25vh;
+    left: 2.5vw;
+}
+
+.item img {
+    height: 30vh;
+    margin: 0;
+    padding: 0;
+    width: 20vw;
+}
