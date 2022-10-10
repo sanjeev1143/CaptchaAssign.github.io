@@ -2,12 +2,16 @@ body {
     box-sizing: border-box;
 }
 
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .box {
     display: grid;
     border: 1px solid black;
-    padding: 2vh;
-    grid-column-gap: 0vw;
-    grid-template-columns: repeat(4, 3fr);
+    padding: 1vh;
+    grid-template-columns: repeat(4, 2fr);
 }
 
 input.checkbox {
@@ -21,7 +25,5 @@ input.checkbox {
 
 .item img {
     height: 30vh;
-    margin: 0;
-    padding: 0;
     width: 20vw;
 }
