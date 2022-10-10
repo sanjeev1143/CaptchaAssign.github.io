@@ -1,25 +1,23 @@
-const url = "https://api.unsplash.com/photos/random/?client_id=amaqjpYDIQf1IiXjsz28R5hF_d5zh1mAJ9PCz2GMlIw"
+const url = "https://api.unsplash.com/photos/random/?client_id=W3uhXQo9EtpD1J6YzfOggPx6uv73YNl7QOuHbBEhcFc"
 
 
 const checkbox = document.getElementsByClassName("checkbox");
 
-function generateImg(e) {
+async function generateImg(e) {
 
     let iurl = "";
-    fetch(url)
+    await fetch(url)
         .then(res => res.json())
         .then(data => {
+
             iurl = (data.urls.full);
+
         })
-        .catch(alert("error"))
     const a = document.querySelectorAll(`.item:nth-child(${e})`)[0].children[1].attributes[1].value;
-    console.log(iurl);
-    console.log(a);
-    console.log(document.getElementById(`${a}`).src);
     setTimeout(() => {
         document.getElementById(`${e}`).checked = false;
     }, 2000)
 
     document.getElementById(`${a}`).src = iurl;
-    console.log("hii");
+
 }
