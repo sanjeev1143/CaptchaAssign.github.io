@@ -10,7 +10,7 @@ async function generateImg(e) {
         .then(res => res.json())
         .then(data => {
 
-            iurl = (data.urls.full);
+            iurl = (data.urls.small);
 
         })
     const a = document.querySelectorAll(`.item:nth-child(${e})`)[0].children[1].attributes[1].value;
